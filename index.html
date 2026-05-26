@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Happy Birthday My World ❤️</title>
+
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="cinemaIntro">
+
+        <h2>ARSHIN STUDIOS PRESENTS</h2>
+
+        <h1>THE HAUNTED MANSION OF MEMORIES</h1>
+
+        <p>A birthday story made with love ❤️</p>
+
+    </div>
+
+    <audio id="introBoom" src="audio/intro-boom.mp3"></audio>
+
+    <div id="loader">
+        <h1 id="loaderText">
+            Loading Memories ❤️
+        </h1>
+
+        <p id="loaderQuote">
+            Some memories were never meant to die...
+        </p>
+        <p class="final-whisper">
+            Thank you for visiting
+        </p>
+    </div>
+
+    <div id="petalContainer"></div>
+
+    <button id="musicToggle">🎵</button>
+    <audio id="bgMusic" src="audio/background.mp3" loop></audio>
+    <div id="rain"></div>
+
+    <div id="ambientOverlay"></div>
+    <div id="filmGrain"></div>
+    <div id="vignette"></div>
+
+
+    <audio id="thunderAudio" src="audio/thunder.mp3"></audio>
+
+    <!-- Lightning -->
+    <div id="lightning"></div>
+
+    <!-- Fog -->
+    <div class="fog fog1"></div>
+    <div class="fog fog2"></div>
+
+    <!-- Floating Hearts -->
+    <div id="heart-container"></div>
+    <div id="toast" class="toast hidden"></div>
+    <div id="memoryWhisper" class="hidden"></div>
+    <div id="doorTransition">
+        <div class="door-transition-left"></div>
+        <div class="door-transition-right"></div>
+        <p id="transitionText">Entering...</p>
+    </div>
+
+    <audio id="doorCreak" src="audio/door-creak.mp3"></audio>
+
+    <!-- ===================================== -->
+    <!-- PAGE 1 : ENTRANCE -->
+    <!-- ===================================== -->
+
+    <section id="entrance" class="page active">
+
+        <div class="moon"></div>
+
+        <div class="content">
+
+            <h1>Happy Birthday <br> My Whole World ❤️</h1>
+
+            <p id="introText"></p>
+
+            <button id="enterBtn">Enter If You Dare ❤️ </button>
+        </div>
+
+    </section>
+
+    <!-- ===================================== -->
+    <!-- PAGE 2 : GAME -->
+    <!-- ===================================== -->
+
+    <section id="game" class="page">
+
+        <h2>Find The Birthday Cake 🎂</h2>
+
+        <p>
+            One of these objects hides your birthday surprise.
+        </p>
+
+        <div class="game-grid">
+
+            <div class="object wrong">💀</div>
+            <div class="object wrong">👻</div>
+            <div class="object wrong">🕯️</div>
+            <div class="object wrong">🧸</div>
+
+            <div id="cake" class="object cake">
+                🎂
+            </div>
+
+        </div>
+
+        <p id="gameMessage"></p>
+
+        <button id="continueBtn" class="hidden">
+            Continue ❤️
+        </button>
+
+    </section>
+    <!-- ===================================== -->
+    <!-- PAGE 3 : CAKE CUTTING -->
+    <!-- ===================================== -->
+
+    <section id="cakeCut" class="page">
+
+        <h2>Birthday Cake Time 🎂</h2>
+
+        <div id="birthdayCake" class="birthday-cake">
+            🎂
+        </div>
+
+        <p id="cutMessage">
+            Click the cake to cut it ❤️
+        </p>
+
+        <button id="openMemories" class="hidden">
+            Open My Memories ❤️
+        </button>
+
+    </section>
+
+    <!-- ===================================== -->
+    <!-- PAGE 3 : STORY -->
+    <!-- ===================================== -->
+
+    <section id="story" class="page">
+
+        <div class="story-box">
+
+            <h2>Memories...</h2>
+
+            <p id="storyText"></p>
+
+            <button id="nextMessage">
+                Next Memory ❤️
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- ===================================== -->
+    <!-- PAGE 4 : GRAND HALL -->
+    <!-- ===================================== -->
+
+    <section id="hub" class="page">
+
+        <h1>The Grand Hall</h1>
+
+        <p>
+            Every door hides a piece of my heart.
+        </p>
+
+        <div class="doors">
+
+            <div class="door" id="galleryDoor">
+
+                <span>📸</span>
+
+                <h3>
+                    Gallery Of Memories
+                </h3>
+
+            </div>
+
+            <div class="door" id="voiceDoor">
+
+                <span>🎵</span>
+
+                <h3>
+                    Voice Vault
+                </h3>
+
+            </div>
+
+            <div class="door" id="letterDoor">
+
+                <span>💌</span>
+
+                <h3>
+                    The Hidden Letter
+                </h3>
+
+            </div>
+            <div class="door" id="cinemaDoor">
+
+                <span>🎞️</span>
+
+                <h3>
+                    The Cinema Room
+                </h3>
+
+            </div>
+            <div class="door" id="secretDoor">
+                <span>🔐</span>
+                <h3>Secret Room</h3>
+            </div>
+
+        </div>
+        <div class="memory-stats">
+
+            <div class="stat-card">
+                <h2>35</h2>
+                <p>Photos Saved</p>
+            </div>
+
+            <div class="stat-card">
+                <h2>14</h2>
+                <p>Voice Memories</p>
+            </div>
+
+            <div class="stat-card">
+                <h2>9</h2>
+                <p>Cinema Tapes</p>
+            </div>
+
+            <div class="stat-card">
+                <h2>1</h2>
+                <p>Heart Still Missing</p>
+            </div>
+
+        </div>
+        <div class="unlock-panel">
+            <h3>Unlock the Final Surprise</h3>
+            <p id="unlockText">Visit all three rooms to unlock the ending ❤️</p>
+            <div class="unlock-checks">
+                <span id="galleryCheck">📸 Gallery</span>
+                <span id="voiceCheck">🎵 Voice</span>
+                <span id="letterCheck">💌 Letter</span>
+            </div>
+            <button id="finalBtn" class="hidden">Final Surprise ❤️</button>
+        </div>
+        <div class="mansion-secrets">
+
+            <div class="secret-card">
+
+                <span>🪽</span>
+
+                <h3>The Fallen Angel😇</h3>
+
+                <p>
+                    Heaven doesn't know an angel is living here without wings ❤️
+                </p>
+
+            </div>
+
+            <div class="secret-card">
+
+                <span>🌊</span>
+
+                <h3>The Ocean's Secret </h3>
+
+                <p>
+                    Somewhere beneath the waves,
+                    the ocean is still searching for the treasure it lost ❤️
+                </p>
+
+            </div>
+
+            <div class="secret-card">
+
+                <span>🌙</span>
+
+                <h3>The Jealous Moon</h3>
+
+                <p>
+                    The moon keeps looking down, trying to figure out how someone shines brighter than it 🌙❤️
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+    </section>
+    <div id="endingTransition">
+
+        <h1 id="endingLine"></h1>
+
+    </div>
+    <div id="cinemaModal" class="modal">
+
+        <div class="modal-content">
+
+            <span class="close">&times;</span>
+
+            <h2>Memory Tapes 🎞️</h2>
+
+            <p class="cinema-line">
+                Some moments were too beautiful to leave behind.
+            </p>
+
+            <div class="video-grid">
+
+
+
+                <div class="video-card">
+                    <div class="tape-noise"></div>
+
+                    <h3>Tape 01</h3>
+
+
+                    <p>Nth resam aa Aishu na Kanan 🫶</p>
+
+                    <video controls poster="images/thumb1.jpg">
+
+                        <source src="videos/video1.mp4" type="video/mp4">
+
+                    </video>
+
+                </div>
+                <div class="video-card">
+                    <div class="tape-noise"></div>
+
+                    <h3>Tape 02</h3>
+
+                    <p>Monalisa Tottu Povum Allo 😩✨</p>
+
+                    <video controls poster="images/thumb2.jpg">
+
+                        <source src="videos/video2.mp4" type="video/mp4">
+
+                    </video>
+
+                </div>
+                <div class="video-card">
+                    <div class="tape-noise"></div>
+
+                    <h3>Tape 03</h3>
+
+                    <p>I Would NEver Fall Unless Its Youuu</p>
+
+                    <video controls poster="images/thumb3.jpg">
+
+                        <source src="videos/video3.mp4" type="video/mp4">
+
+                    </video>
+
+                </div>
+                <div class="video-card">
+                    <div class="tape-noise"></div>
+
+                    <h3>Tape 04</h3>
+
+                    <p>Kaise Batauu🤌</p>
+
+                    <video controls poster="images/thumb4.jpg">
+
+                        <source src="videos/video4.mp4" type="video/mp4">
+
+                    </video>
+
+                </div>
+                <div class="video-card">
+                    <div class="tape-noise"></div>
+
+                    <h3>Tape 05</h3>
+
+                    <p>Take a Look At M.......🥺</p>
+
+                    <video controls poster="images/thumb5.jpg">
+
+                        <source src="videos/video5.mp4" type="video/mp4">
+
+                    </video>
+
+                </div>
+                <div class="video-card">
+                    <div class="tape-noise"></div>
+
+                    <h3>Tape 06</h3>
+
+                    <p>Aww 😭🤌i would melt here </p>
+
+                    <video controls poster="images/thumb6.jpg">
+
+                        <source src="videos/video6.mp4" type="video/mp4">
+
+                    </video>
+
+                </div>
+                <div class="video-card">
+                    <div class="tape-noise"></div>
+
+                    <h3>Tape 07</h3>
+
+                    <p>I still replay this one a lot🫠💗.</p>
+
+                    <video controls poster="images/thumb7.jpg">
+
+                        <source src="videos/video7.mp4" type="video/mp4">
+
+                    </video>
+
+                </div>
+                <div class="video-card">
+                    <div class="tape-noise"></div>
+
+                    <h3>Tape 08</h3>
+
+                    <p>This view 🥹</p>
+
+                    <video controls poster="images/thumb8.jpg">
+
+                        <source src="videos/video8.mp4" type="video/mp4">
+
+                    </video>
+
+                </div>
+                <div class="video-card">
+                    <div class="tape-noise"></div>
+
+                    <h3>Tape 09</h3>
+
+                    <p>Nenjinakathooo</p>
+
+                    <video controls poster="images/thumb9.jpg">
+
+                        <source src="videos/video9.mp4" type="video/mp4">
+
+                    </video>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+    <section id="finalSurprise" class="page">
+
+        <div class="final-box">
+
+            <h1>
+                Happy Birthday Aishuuuuu❤️
+            </h1>
+
+            <img src="images/final.jpg" alt="Our Memory" class="final-photo">
+
+            <p class="final-message">
+
+                Some people don’t stay in our lives forever,
+
+                but the memories they leave behind
+                become a quiet part of who we are.
+
+                This little mansion was made from moments,
+                silence,
+                smiles,
+                and things I never really knew how to say.
+
+                I hope life treats you gently.
+
+                Happy Birthday ❤️
+
+            </p>
+
+            <h2>
+                Some memories never really leave 🖤
+            </h2>
+            <button id="replayBtn">Replay From Start ↺</button>
+
+        </div>
+
+    </section>
+    <!-- ===================================== -->
+    <!-- GALLERY MODAL -->
+    <!-- ===================================== -->
+
+    <div id="galleryModal" class="modal">
+
+        <div class="modal-content">
+
+            <span class="close">&times;</span>
+
+            <h2>Gallery Of Memories ❤️</h2>
+
+            <div class="gallery-toolbar">
+                <input id="gallerySearch" type="text" placeholder="Search captions...">
+                <button id="surprisePhotoBtn">Random Memory ✨</button>
+            </div>
+
+            <div id="galleryGrid" class="gallery-grid"></div>
+
+            <!-- FULLSCREEN VIEWER -->
+
+            <div id="imageViewer" class="image-viewer">
+
+                <span id="closeViewer">&times;</span>
+
+                <img id="viewerImg" src="">
+
+                <p id="viewerCaption"></p>
+
+                <button id="prevBtn">⬅</button>
+
+                <button id="nextBtn">➡</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ===================================== -->
+    <!-- VOICE VAULT MODAL -->
+    <!-- ===================================== -->
+
+    <div id="voiceModal" class="modal">
+
+        <div class="modal-content">
+
+            <span class="close">&times;</span>
+
+            <h2>The Sound Of Home 🎵</h2>
+
+            <div class="music-player">
+
+                <img src="https://cdn-icons-png.flaticon.com/512/26/26805.png" class="vinyl" alt="vinyl">
+
+                <div class="track-list">
+
+                    <div class="spotify-player">
+
+                        <img id="albumArt" src="images/cover.jpg" alt="Album Cover" class="album-art">
+
+                        <h3 id="trackTitle">
+                            Aishu FM ❤️
+                        </h3>
+
+                        <audio id="audioPlayer"></audio>
+
+                        <div class="progress-container">
+                            <div id="progressBar"></div>
+                        </div>
+
+                        <div class="time-row">
+                            <span id="currentTime">0:00</span>
+                            <span>/</span>
+                            <span id="duration">0:00</span>
+                        </div>
+                        <div class="player-controls">
+
+                            <button id="prevTrack">⏮</button>
+
+                            <button id="playPauseBtn">▶</button>
+
+                            <button id="nextTrack">⏭</button>
+
+                        </div>
+
+                        <div class="equalizer">
+
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                        </div>
+
+                        <div class="track-list">
+
+                            <button onclick="playTrack('audio/voice1.mp3','Voice Message 1 ❤️')">
+                                Kithe Reh Gaya 🤌❤️
+                            </button>
+
+                            <button onclick="playTrack('audio/voice2.mp3','Voice Message 2 ❤️')">
+                                Ham To Chupke ✨❤️
+                            </button>
+
+                            <button onclick="playTrack('audio/voice3.mp3','Voice Message 3 ❤️')">
+                                Chahun Main Ya Naa 🫴❤️
+                            </button>
+
+                            <button onclick="playTrack('audio/voice4.mp3','Voice Message 4 ❤️')">
+                                Dil Jo Tumara He 😇❤️
+                            </button>
+
+                            <button onclick="playTrack('audio/voice5.mp3','Voice Message 5 ❤️')">
+                                Udaarian v1 😩❤️
+                            </button>
+
+                            <button onclick="playTrack('audio/voice6.mp3','Voice Message 6 ❤️')">
+                                Udaarian v2 🥰❤️
+                            </button>
+
+                            <button onclick="playTrack('audio/voice7.mp3','Voice Message 7 ❤️')">
+                                Voice Message 7 ❤️
+                            </button>
+
+                            <button onclick="playTrack('audio/voice8.mp3','Voice Message 8 ❤️')">
+                                Udaarian v2 😍❤️
+                            </button>
+
+                            <button onclick="playTrack('audio/voice9.mp3','Voice Message 9 ❤️')">
+                                It Takes a Smile 😭❤️
+                            </button>
+
+                            <button onclick="playTrack('audio/voice10.mp3','Voice Message 10 ❤️')">
+                                Voice Message 10 ❤️
+                            </button>
+
+                            <button onclick="playTrack('audio/voice11.mp3','Voice Message 11 ❤️')">
+                                Manasinte Maniyarayil 🫶❤️
+                            </button>
+
+                            <button onclick="playTrack('audio/voice12.mp3','Voice Message 12 ❤️')">
+                                Manasinte Maniyarayil v2 🌝 ❤️
+                            </button>
+
+                            <button onclick="playTrack('audio/voice13.mp3','Voice Message 13 ❤️')">
+                                Agar Tum Sath Ho 🥺❤️
+                            </button>
+
+                            <button onclick="playTrack('audio/voice14.mp3','Voice Message 14 ❤️')">
+                                Voice Message 14 ❤️
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ===================================== -->
+    <!-- LETTER MODAL -->
+    <!-- ===================================== -->
+
+    <div id="letterModal" class="modal">
+
+        <div class="modal-content letter-box">
+
+            <span class="close">&times;</span>
+
+            <h2>To My Favorite Person ❤️</h2>
+
+            <div class="love-note-box">
+                <p id="dailyNote">Click for a tiny love note.</p>
+                <button id="newNoteBtn">New Love Note 💗</button>
+            </div>
+
+            <div class="envelope-container">
+
+                <div id="envelope" class="envelope">
+                    💌
+                </div>
+
+                <div id="secretLetter" class="secret-letter hidden">
+
+                    <h2>To My Favorite Person ❤️</h2>
+
+                    <p id="typedLetter"></p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- SECRET PASSWORD ROOM -->
+    <section id="secretRoom" class="page">
+
+        <h1>Secret Room 🔐</h1>
+
+        <p>
+            Only the love of my life knows the password ❤️
+        </p>
+
+        <input type="password" id="secretInput" placeholder="Enter Secret Password">
+
+        <button id="unlockSecret">
+            Unlock ❤️
+        </button>
+
+        <p id="secretMessage"></p>
+        <button id="backToHall">
+            ⬅ Return To Grand Hall
+        </button>
+
+    </section>
+
+
+    <canvas id="fireworks"></canvas>
+    <div id="cursorGlow"></div>
+    <audio id="photoAudioA"></audio>
+    <audio id="photoAudioB"></audio>
+
+    <script src="main.js"></script>
+
+
+
+
+</body>
+
+</html>
